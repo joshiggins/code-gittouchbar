@@ -58,6 +58,18 @@
 				"command": "git.sync",
 				"group": "gittouchbar",
 				"title": "Sync"
+			},
+			{
+				"command": "editor.foldAll",
+				"group": "gittouchbar",
+				"title": "Fold All",
+				"icon": "./assets/fold.png"
+			},
+			{
+				"command": "editor.unfoldAll",
+				"group": "gittouchbar",
+				"title": "Unfold All",
+				"icon": "./assets/unfold.png"
 			}
 		],
 		"menus": {
@@ -93,6 +105,14 @@
 				{
 					"command": "editor.action.formatDocument",
 					"group": "gittouchbar_4"
+				},
+				{
+					"command": "editor.foldAll",
+					"group": "gittouchbar_5@1"
+				},
+				{
+					"command": "editor.unfoldAll",
+					"group": "gittouchbar_5@2"
 				}
 			]
 		}
