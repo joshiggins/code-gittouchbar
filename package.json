@@ -70,6 +70,12 @@
 				"group": "gittouchbar",
 				"title": "Unfold All",
 				"icon": "./assets/unfold.png"
+			},
+			{
+				"command": "workbench.action.closeAllEditors",
+				"group": "gittouchbar",
+				"title": "Close All",
+				"icon": "./assets/close-all.png"
 			}
 		],
 		"menus": {
@@ -113,6 +119,10 @@
 				{
 					"command": "editor.unfoldAll",
 					"group": "gittouchbar_5@2"
+				},
+				{
+					"command": "workbench.action.closeAllEditors",
+					"group": "gittouchbar_6"
 				}
 			]
 		}
