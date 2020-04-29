@@ -1,7 +1,7 @@
 {
 	"name": "gittouchbar",
 	"displayName": "gittouchbar",
-	"description": "An SCM orientated touch bar",
+	"description": "An SCM-centric touchbar extension",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.44.0"
@@ -10,16 +10,92 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:gittouchbar.helloWorld"
+		"onCommand:gittouchbar.sync"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "gittouchbar.helloWorld",
-				"title": "Hello World"
+				"command": "workbench.view.explorer",
+				"group": "gittouchbar",
+				"title": "Explorer",
+				"icon": "./assets/explorer.png"
+			},
+			{
+				"command": "workbench.view.scm",
+				"group": "gittouchbar",
+				"title": "SCM",
+				"icon": "./assets/scm.png"
+			},
+			{
+				"command": "workbench.action.showCommands",
+				"group": "gittouchbar",
+				"title": ">_"
+			},
+			{
+				"command": "editor.action.formatDocument",
+				"group": "gittouchbar",
+				"title": "⇝ƒ⇜"
+			},
+			{
+				"command": "git.stage",
+				"group": "gittouchbar",
+				"title": "Stage"
+			},
+			{
+				"command": "git.stageSelectedRanges",
+				"group": "gittouchbar",
+				"title": "Stage Selection",
+				"icon": "./assets/stage-selection.png"
+			},
+			{
+				"command": "git.stageAll",
+				"group": "gittouchbar",
+				"title": "Stage All",
+				"icon": "./assets/stage-all.png"
+			},
+			{
+				"command": "git.sync",
+				"group": "gittouchbar",
+				"title": "Sync"
 			}
-		]
+		],
+		"menus": {
+			"touchBar": [
+				{
+					"command": "workbench.view.explorer",
+					"group": "gittouchbar_1@1"
+				},
+				{
+					"command": "workbench.view.scm",
+					"group": "gittouchbar_1@2"
+				},
+				{
+					"command": "workbench.action.showCommands",
+					"group": "gittouchbar_1@3"
+				},
+				{
+					"command": "git.sync",
+					"group": "gittouchbar_2"
+				},
+				{
+					"command": "git.stage",
+					"group": "gittouchbar_3@1"
+				},
+				{
+					"command": "git.stageSelectedRanges",
+					"group": "gittouchbar_3@2"
+				},
+				{
+					"command": "git.stageAll",
+					"group": "gittouchbar_3@3"
+				},
+				{
+					"command": "editor.action.formatDocument",
+					"group": "gittouchbar_4"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
